@@ -39,3 +39,17 @@ const STORE = {
   }
 
 export default STORE;
+
+
+//EXAMPLE OF LIST MAPPING
+
+// const arrayOfLis = STORE.lists.map((list) =>
+//     <li key={list.id}>
+//         {list.header}
+//     </li>
+// )
+// return (
+//     <ul>
+//         {arrayOfLis}
+//     </ul>
+// )
