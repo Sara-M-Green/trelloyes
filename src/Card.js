@@ -8,6 +8,7 @@ class CardsClass extends React.Component {
             <div className='Card'>
                 <button
                     type="button"
+                    onClick={() => this.props.onDelete(this.props.id)}
                 >
                     delete
                 </button>
@@ -15,7 +16,12 @@ class CardsClass extends React.Component {
                 <p className='Card-content'>{this.props.content}</p>
             </div>
         )
-    }  
+    }      
 }
+
+CardsClass.defaultProps = {
+    onDelete: () => {}
+}
+
 
 export default CardsClass;

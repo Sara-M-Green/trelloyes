@@ -13,13 +13,16 @@ class ListClass extends React.Component {
                     {this.props.cards.map((card) => 
                         <CardsClass
                             key={card.id}
+                            id={card.id}
                             title={card.title}
                             content={card.content}
+                            onDelete={this.props.onDelete}
                         />
                     )}
                     <button
                         type="button"
-                        className="List-add-button"    
+                        className="List-add-button"
+                        onClick={() => this.props.onNewCard(this.props.id)}    
                     >
                         + Add Random Card
                     </button>
@@ -27,6 +30,10 @@ class ListClass extends React.Component {
             </section>
         )
     }
+}
+
+ListClass.defaultProps = {
+    onNewCard: () => {},
 }
 
 export default ListClass;
